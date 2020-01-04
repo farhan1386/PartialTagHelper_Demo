@@ -1,0 +1,25 @@
+﻿@model IEnumerable<PartialTagHelper_Demo.Models.Employee>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Name)</th>
+            <th>@Html.DisplayNameFor(m => m.Position)</th>
+            <th>@Html.DisplayNameFor(m => m.Office)</th>
+            <th>@Html.DisplayNameFor(m => m.Age)</th>
+            <th>@Html.DisplayNameFor(m => m.Salary)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Position</td>
+                <td>@item.Office</td>
+                <td>@item.Age</td>
+                <td>@item.Salary</td>
+            </tr>
+        }
+    </tbody>
+</table>
